@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2150C52066D2DE036094BAB3 /* Pods_PlaceNotesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC090827F19A53C8E41EBA5F /* Pods_PlaceNotesTests.framework */; };
+		8841D7B924E2DF97007B7E24 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8841D7B824E2DF97007B7E24 /* .gitignore */; };
 		88E19C8A24E271EB00300858 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E19C8924E271EB00300858 /* AppDelegate.swift */; };
 		88E19C8C24E271EB00300858 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E19C8B24E271EB00300858 /* SceneDelegate.swift */; };
 		88E19C9324E271F000300858 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88E19C9224E271F000300858 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		3FD41D55333382D14DD0B8C5 /* Pods-PlaceNotesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceNotesTests.release.xcconfig"; path = "Target Support Files/Pods-PlaceNotesTests/Pods-PlaceNotesTests.release.xcconfig"; sourceTree = "<group>"; };
 		659223421197FE1693DEB656 /* Pods-PlaceNotesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceNotesTests.debug.xcconfig"; path = "Target Support Files/Pods-PlaceNotesTests/Pods-PlaceNotesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7CE7775D53FA519C48092BC0 /* Pods-PlaceNotes-PlaceNotesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceNotes-PlaceNotesUITests.release.xcconfig"; path = "Target Support Files/Pods-PlaceNotes-PlaceNotesUITests/Pods-PlaceNotes-PlaceNotesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8841D7B824E2DF97007B7E24 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		88E19C8624E271EB00300858 /* PlaceNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaceNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E19C8924E271EB00300858 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88E19C8B24E271EB00300858 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				88E19CBB24E276C300300858 /* LaunchScreen.storyboard */,
 				88E19CD024E27D4700300858 /* LaunchScreen.storyboard */,
 				88E19C9224E271F000300858 /* Assets.xcassets */,
+				8841D7B824E2DF97007B7E24 /* .gitignore */,
 				88E19C9724E271F000300858 /* Info.plist */,
 			);
 			path = PlaceNotes;
@@ -328,6 +331,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8841D7B924E2DF97007B7E24 /* .gitignore in Resources */,
 				88E19CD124E27D4800300858 /* LaunchScreen.storyboard in Resources */,
 				88E19C9324E271F000300858 /* Assets.xcassets in Resources */,
 				88E19CBA24E2763400300858 /* Main.storyboard in Resources */,
