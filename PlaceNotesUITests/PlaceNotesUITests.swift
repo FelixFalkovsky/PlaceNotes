@@ -2,8 +2,8 @@
 //  PlaceNotesUITests.swift
 //  PlaceNotesUITests
 //
-//  Created by Felix Falkovsky on 11.08.2020.
-//  Copyright © 2020 Felix Falkovsky. All rights reserved.
+//  Created by Felix Falkovsky on 11.08.2019.
+//  Copyright © 2019 Felix Falkovsky. All rights reserved.
 //
 
 import XCTest

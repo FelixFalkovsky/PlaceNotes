@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:PlaceNotes.xcodeproj">
+      location = "group:/Users/FelixFalkovsky/Documents/SWIFT/LESSENS/TEST/PlaceNotes/PlaceNotes/LaunchScreen.storyboard">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>
