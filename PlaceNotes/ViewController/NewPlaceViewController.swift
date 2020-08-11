@@ -12,7 +12,7 @@ import RealmSwift
 class NewPlaceViewController: UITableViewController {
     
     var currentPlace: Place?
-    var newPlace = Place()
+    //var newPlace = Place()
     var imageIsChanged = false
     
     @IBOutlet weak var placeImage: UIImageView!
@@ -72,32 +72,32 @@ class NewPlaceViewController: UITableViewController {
             view.endEditing(true)
         }
     }
-//    func savePlace() {
-//
-//        var image: UIImage?
-//
-//        if imageIsChanged {
-//            image = placeImage.image
-//        }else {
-//            image = #imageLiteral(resourceName: "Teller")
-//        }
-//        let imageData = image?.pngData()
-//
-//        let newPlace = Place(name: placeName.text!,
-//                         location: placeLocation.text,
-//                         type: placeType.text,
-//                         imageData: imageData)
-//        if currentPlace != nil {
-//            try! realm.write {
-//                currentPlace?.name = newPlace.name
-//                currentPlace?.location = newPlace.location
-//                currentPlace?.type = newPlace.type
-//                currentPlace?.imageData = newPlace.imageData
-//            }
-//        }else {
-//            StorageManager.saveObject(newPlace)
-//        }
-//    }
+    func savePlace() {
+
+        var image: UIImage?
+
+        if imageIsChanged {
+            image = placeImage.image
+        }else {
+            image = #imageLiteral(resourceName: "Teller")
+        }
+        let imageData = image?.pngData()
+
+        let newPlace = Place(name: placeName.text!,
+                         location: placeLocation.text,
+                         type: placeType.text,
+                         imageData: imageData)
+        if currentPlace != nil {
+            try! realm.write {
+                currentPlace?.name = newPlace.name
+                currentPlace?.location = newPlace.location
+                currentPlace?.type = newPlace.type
+                currentPlace?.imageData = newPlace.imageData
+            }
+        }else {
+            StorageManager.saveObject(newPlace)
+        }
+    }
     private func setupEditScreen() {
         if currentPlace != nil {
             setupNavigationBar()

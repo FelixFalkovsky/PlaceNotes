@@ -74,7 +74,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return cell
     }
     
-    //MARK: Table view delegete
+    //MARK: Table view delegete  //Удаление из базы данных / поделиться
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let place = places[indexPath.row]
         let ShareAction = UIContextualAction(style: .destructive, title: "SHARE", handler: { (action, IndexPath, view) in
@@ -97,8 +97,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
 
     // MARK: - Navigation
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             guard let indexPath = tableView.indexPathForSelectedRow else { return }
@@ -114,11 +112,11 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     }
 
-//    @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {
-//        guard let newPlaceVC = segue.source as? NewPlaceViewController else { return }
-//        newPlaceVC.savePlace()
-//        tableView.reloadData()
-//    }
+    @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {
+        guard let newPlaceVC = segue.source as? NewPlaceViewController else { return }
+        newPlaceVC.savePlace()
+        tableView.reloadData()
+    }
     
     
 

@@ -11,14 +11,16 @@ import RealmSwift
 let realm = try! Realm()
 
 class StorageManager {
+    
+    // Сохранение в базу данных
     static func saveObject (_ place: Place) {
-        // Сохранение в базу данных
         try! realm.write {
             realm .add(place)
         }
     }
+    
+    //Удаление из базы данных
     static func deleteObject(_ place: Place) {
-         //Сохранение в базу данных
         try! realm.write {
             realm.delete(place)
         }
