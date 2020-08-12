@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2150C52066D2DE036094BAB3 /* Pods_PlaceNotesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC090827F19A53C8E41EBA5F /* Pods_PlaceNotesTests.framework */; };
 		8841D7B924E2DF97007B7E24 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8841D7B824E2DF97007B7E24 /* .gitignore */; };
+		886BB05624E3E9B60073FCB6 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 886BB05524E3E9B60073FCB6 /* Cosmos */; };
 		88E19C8A24E271EB00300858 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E19C8924E271EB00300858 /* AppDelegate.swift */; };
 		88E19C8C24E271EB00300858 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E19C8B24E271EB00300858 /* SceneDelegate.swift */; };
 		88E19C9324E271F000300858 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88E19C9224E271F000300858 /* Assets.xcassets */; };
@@ -87,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				886BB05624E3E9B60073FCB6 /* Cosmos in Frameworks */,
 				ED64A7ED2A17C71DB814EA9D /* Pods_PlaceNotes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +242,9 @@
 			dependencies = (
 			);
 			name = PlaceNotes;
+			packageProductDependencies = (
+				886BB05524E3E9B60073FCB6 /* Cosmos */,
+			);
 			productName = PlaceNotes;
 			productReference = 88E19C8624E271EB00300858 /* PlaceNotes.app */;
 			productType = "com.apple.product-type.application";
@@ -315,6 +320,9 @@
 				Base,
 			);
 			mainGroup = 88E19C7D24E271EB00300858;
+			packageReferences = (
+				886BB05424E3E9B60073FCB6 /* XCRemoteSwiftPackageReference "Cosmos" */,
+			);
 			productRefGroup = 88E19C8724E271EB00300858 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -635,7 +643,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Felix.PlaceNotes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Felix.IMMO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -654,7 +662,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Felix.PlaceNotes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Felix.IMMO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -789,6 +797,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		886BB05424E3E9B60073FCB6 /* XCRemoteSwiftPackageReference "Cosmos" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/Cosmos.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 22.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		886BB05524E3E9B60073FCB6 /* Cosmos */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 886BB05424E3E9B60073FCB6 /* XCRemoteSwiftPackageReference "Cosmos" */;
+			productName = Cosmos;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 88E19C7E24E271EB00300858 /* Project object */;
 }

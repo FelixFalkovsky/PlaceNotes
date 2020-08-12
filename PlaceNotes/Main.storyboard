@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zcE-GT-1nt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17140" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zcE-GT-1nt">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17115"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--New Place-->
         <scene sceneID="Nge-0h-SgW">
             <objects>
-                <tableViewController wantsFullScreenLayout="YES" id="ivO-ZN-c5A" customClass="NewPlaceViewController" customModule="Plätze" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController wantsFullScreenLayout="YES" id="ivO-ZN-c5A" customClass="NewPlaceViewController" customModule="PlaceNotes" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2Yy-xF-cIg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                         <sections>
                             <tableViewSection id="QET-iG-e5G">
@@ -35,7 +37,7 @@
                                                         <constraint firstAttribute="height" constant="30" id="gDt-GH-O8O"/>
                                                         <constraint firstAttribute="width" constant="30" id="gbU-Lr-NVJ"/>
                                                     </constraints>
-                                                    <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" red="0.68235294120000001" green="0.59607843140000005" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" image="map.fill" catalog="system">
                                                         <color key="titleColor" red="0.68235294120000001" green="0.59607843140000005" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
@@ -127,7 +129,7 @@
                                                         <constraint firstAttribute="width" constant="30" id="3mo-Pc-goP"/>
                                                         <constraint firstAttribute="height" constant="30" id="tBn-zc-tEP"/>
                                                     </constraints>
-                                                    <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" red="0.68235294120000001" green="0.59607843140000005" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" image="mappin.and.ellipse" catalog="system"/>
                                                     <connections>
                                                         <segue destination="6DU-7w-Vhg" kind="presentation" identifier="getAddress" modalPresentationStyle="fullScreen" id="8m0-f9-zsU"/>
@@ -186,7 +188,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="156.99999999999997" placeholderIntrinsicHeight="25" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="F14-DO-kLl" customClass="RatingControl" customModule="Plätze" customModuleProvider="target">
+                                                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="156.99999999999997" placeholderIntrinsicHeight="25" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="F14-DO-kLl" customClass="RatingControl" customModule="PlaceNotes" customModuleProvider="target">
                                                     <rect key="frame" x="128.66666666666666" y="57.666666666666657" width="156.99999999999997" height="25"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <userDefinedRuntimeAttributes>
@@ -198,7 +200,33 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </stackView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TbF-fb-wSA" customClass="CosmosView" customModule="Cosmos">
+                                                    <rect key="frame" x="109" y="55" width="157" height="30"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="157" id="STA-Vk-7j2"/>
+                                                        <constraint firstAttribute="height" constant="30" id="kfJ-Zy-RmR"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                            <real key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="filledStar"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="emptyStar"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="TbF-fb-wSA" firstAttribute="centerX" secondItem="1Id-39-lMX" secondAttribute="centerX" id="8CF-bE-OsE"/>
+                                                <constraint firstItem="TbF-fb-wSA" firstAttribute="top" secondItem="1Id-39-lMX" secondAttribute="topMargin" constant="44" id="Uzp-xs-Mi2"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="TbF-fb-wSA" secondAttribute="bottom" constant="44" id="adV-0b-xjI"/>
+                                                <constraint firstItem="TbF-fb-wSA" firstAttribute="centerY" secondItem="1Id-39-lMX" secondAttribute="centerY" id="sxf-iR-7UO"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="F14-DO-kLl"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -224,6 +252,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="cosmosView" destination="TbF-fb-wSA" id="KQN-rs-3bU"/>
                         <outlet property="placeImage" destination="aRM-yD-ryL" id="26E-Or-DtP"/>
                         <outlet property="placeLocation" destination="1zN-Pd-san" id="xPK-Ep-izD"/>
                         <outlet property="placeName" destination="78P-cH-feI" id="hkU-AD-eMJ"/>
@@ -239,7 +268,7 @@
         <!--Map View Controller-->
         <scene sceneID="zBx-Y6-SL7">
             <objects>
-                <viewController id="6DU-7w-Vhg" customClass="MapViewController" customModule="Plätze" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6DU-7w-Vhg" customClass="MapViewController" customModule="PlaceNotes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ghw-Eg-nNh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -264,7 +293,7 @@
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mappin" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BC1-hi-WSh">
                                 <rect key="frame" x="167.66666666666666" y="373.33333333333331" width="40" height="35.333333333333314"/>
-                                <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="gub-sX-NOs"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="wnO-Aa-UuQ"/>
@@ -282,7 +311,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tqv-Eg-grP">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tqv-Eg-grP">
                                 <rect key="frame" x="138.33333333333334" y="625" width="106" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="106" id="6Sc-7F-fu8"/>
@@ -327,7 +356,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Ngx-Ic-Y8p"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="1jh-qR-dDW" firstAttribute="leading" secondItem="ssC-XF-yXz" secondAttribute="trailing" constant="8" id="0P2-MQ-r4n"/>
                             <constraint firstAttribute="bottom" secondItem="jSI-1e-PjZ" secondAttribute="bottom" id="2UU-hK-KnZ"/>
@@ -350,7 +380,6 @@
                             <constraint firstItem="Tqv-Eg-grP" firstAttribute="centerX" secondItem="Jut-nk-T8H" secondAttribute="centerX" constant="3.6666666666666572" id="zQb-dC-wtI"/>
                             <constraint firstItem="BC1-hi-WSh" firstAttribute="centerY" secondItem="ghw-Eg-nNh" secondAttribute="centerY" constant="-15" id="zyP-IA-8kx"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Ngx-Ic-Y8p"/>
                     </view>
                     <connections>
                         <outlet property="addressLabel" destination="Jut-nk-T8H" id="K3o-T2-kTZ"/>
@@ -367,16 +396,16 @@
         <!--PLACES-->
         <scene sceneID="CTX-Fb-vdH">
             <objects>
-                <viewController id="atk-Bh-imT" customClass="MainViewController" customModule="Plätze" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="atk-Bh-imT" customClass="MainViewController" customModule="PlaceNotes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LjG-A4-IVI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CLx-tV-WQb">
                                 <rect key="frame" x="0.0" y="120" width="375" height="692"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="7Gi-Qw-yTJ" customClass="CustomTableViewCell" customModule="Plätze" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="7Gi-Qw-yTJ" customClass="CustomTableViewCell" customModule="PlaceNotes" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Gi-Qw-yTJ" id="FEI-BH-eUX">
@@ -391,10 +420,10 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Sgo-gG-S65">
-                                                    <rect key="frame" x="95" y="10" width="167" height="64"/>
+                                                    <rect key="frame" x="95" y="10" width="166" height="64"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8v-0V-h2y">
-                                                            <rect key="frame" x="0.0" y="0.0" width="167" height="21"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="166" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="juM-3s-GXZ"/>
                                                             </constraints>
@@ -403,7 +432,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8L-HS-2Gu">
-                                                            <rect key="frame" x="0.0" y="23" width="167" height="21"/>
+                                                            <rect key="frame" x="0.0" y="23" width="166" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="rpk-7b-ep4"/>
                                                             </constraints>
@@ -412,7 +441,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBY-PN-paU">
-                                                            <rect key="frame" x="0.0" y="46" width="167" height="18"/>
+                                                            <rect key="frame" x="0.0" y="46" width="166" height="18"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="18" id="aPA-z0-pfo"/>
                                                             </constraints>
@@ -423,8 +452,8 @@
                                                     </subviews>
                                                 </stackView>
                                                 <view contentMode="scaleToFill" placeholderIntrinsicWidth="90" placeholderIntrinsicHeight="14" translatesAutoresizingMaskIntoConstraints="NO" id="o8g-RP-Gmh" customClass="CosmosView" customModule="Cosmos">
-                                                    <rect key="frame" x="270" y="35.666666666666664" width="90" height="14"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <rect key="frame" x="269" y="35.666666666666664" width="90" height="14"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="90" id="zbp-Do-RLY"/>
                                                     </constraints>
@@ -432,8 +461,8 @@
                                                         <userDefinedRuntimeAttribute type="number" keyPath="starSize">
                                                             <real key="value" value="14"/>
                                                         </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="LikeHTR"/>
-                                                        <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="LikeHN"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="filledStar"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="emptyStar"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
@@ -449,6 +478,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cosmosView" destination="o8g-RP-Gmh" id="POX-pT-ljg"/>
                                             <outlet property="imageOfPlace" destination="FPR-3d-ynZ" id="7O7-eU-IHG"/>
                                             <outlet property="locationLabel" destination="P8L-HS-2Gu" id="qrc-dW-5sN"/>
                                             <outlet property="nameLabel" destination="V8v-0V-h2y" id="gZs-NR-yNN"/>
@@ -473,7 +503,8 @@
                                 </connections>
                             </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="wJQ-zs-OZE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="mrn-DP-KrJ" firstAttribute="leading" secondItem="wJQ-zs-OZE" secondAttribute="leading" id="Dek-Of-jXX"/>
                             <constraint firstItem="CLx-tV-WQb" firstAttribute="trailing" secondItem="wJQ-zs-OZE" secondAttribute="trailing" id="E6F-mU-ssB"/>
@@ -483,7 +514,6 @@
                             <constraint firstItem="mrn-DP-KrJ" firstAttribute="top" secondItem="wJQ-zs-OZE" secondAttribute="top" id="XcE-Sb-IVE"/>
                             <constraint firstItem="CLx-tV-WQb" firstAttribute="top" secondItem="mrn-DP-KrJ" secondAttribute="bottom" constant="1" id="eXA-mf-kiW"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="wJQ-zs-OZE"/>
                     </view>
                     <navigationItem key="navigationItem" title="PLACES" largeTitleDisplayMode="never" id="DMB-nX-bYB">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.down" catalog="system" id="zOR-Ev-S0I">
@@ -552,22 +582,36 @@
             <point key="canvasLocation" x="2596" y="-198"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="F14-DO-kLl">
+            <size key="intrinsicContentSize" width="156.99999999999997" height="25"/>
+        </designable>
+        <designable name="o8g-RP-Gmh">
+            <size key="intrinsicContentSize" width="90" height="14"/>
+        </designable>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="8m0-f9-zsU"/>
         <segue reference="Qz3-Gg-3Sw"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="LikeHN" width="22.333333969116211" height="19.666666030883789"/>
-        <image name="LikeHTR" width="69" height="65"/>
         <image name="Photo" width="62.666667938232422" height="45"/>
         <image name="arrow.counterclockwise.icloud.fill" catalog="system" width="128" height="88"/>
         <image name="chevron.down" catalog="system" width="128" height="72"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="emptyStar" width="50" height="50"/>
+        <image name="filledStar" width="50" height="50"/>
         <image name="location.circle" catalog="system" width="128" height="121"/>
-        <image name="location.fill" catalog="system" width="128" height="115"/>
-        <image name="map.fill" catalog="system" width="128" height="113"/>
+        <image name="location.fill" catalog="system" width="128" height="121"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
         <image name="mappin" catalog="system" width="105" height="128"/>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
         <image name="multiply.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
