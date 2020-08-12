@@ -73,6 +73,20 @@ class NewPlaceViewController: UITableViewController {
             view.endEditing(true)
         }
     }
+    //MARK: NAVIGATION
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier,
+              let mapVC = segue.destination as? MapViewController else { return }
+        
+        mapVC.incomeSegueIndetifier = identifier
+        if identifier == "showPlace" {
+            mapVC.place.name = placeName.text!
+            mapVC.place.location = placeLocation.text
+            mapVC.place.type = placeType.text
+            mapVC.place.imageData = placeImage.image?.pngData()  
+        }
+    }
+    
     func savePlace() {
 
         var image: UIImage?
