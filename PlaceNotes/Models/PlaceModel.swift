@@ -14,6 +14,7 @@ class Place: Object {
     @objc dynamic var location: String?
     @objc dynamic var type: String?
     @objc dynamic var imageData: Data?
+    @objc dynamic var rating = 0.0
     @objc dynamic var date = Date()
     
 //     let restaurantNames = ["Burger Herous", "Kitchen", "Shwitch", "Bonsai", "Haus", "Мистер и Мисис", "Шок"] - временный массив
@@ -35,11 +36,12 @@ class Place: Object {
 //        }
 //    }
     
-    convenience init (name: String, location: String?, type: String?, imageData: Data?) {
+    convenience init (name: String, location: String?, type: String?,rating: Double, imageData: Data?) {
         self.init()
         self.name = name
         self.location = location
         self.type = type
+        self.rating = rating
         self.imageData = imageData
     }
 }

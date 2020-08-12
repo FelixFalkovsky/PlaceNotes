@@ -7,19 +7,21 @@
 //
 
 import UIKit
-import RealmSwift
+import Cosmos
 
 class NewPlaceViewController: UITableViewController {
     
     var currentPlace: Place?
     //var newPlace = Place()
     var imageIsChanged = false
+    var currentRating = 0.0
     
     @IBOutlet weak var placeImage: UIImageView!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var placeName: UITextField!
     @IBOutlet weak var placeLocation: UITextField!
     @IBOutlet weak var placeType: UITextField!
+    @IBOutlet weak var cosmosView: CosmosView!
     
     
     
@@ -29,22 +31,25 @@ class NewPlaceViewController: UITableViewController {
 //        DispatchQueue.main.async {
 //            self.newPlace.savePlaces() // загрузка временных данных
 //        }
-        
 //        let realmFilePath = Realm.Configuration.defaultConfiguration.fileURL // поиск расположения файла default.realm
 //        print("Realm File Path",realmFilePath!)
-        
         
         tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 1))
         saveButton.isEnabled = false
         placeName.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         setupEditScreen()
+        
+        //MARK: COSMOS
+        cosmosView.didTouchCosmos = { rating in
+            self.currentRating = rating
+        }
     }
     //MARK: Table view delegete
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
             
-            let cameraIcon = #imageLiteral(resourceName: "Camera")
-            let photoIcon = #imageLiteral(resourceName: "PhotoIcon")
+            let cameraIcon = UIImage(systemName: "camera")
+            let photoIcon = UIImage(systemName: "photo")
             
             let actionSheet = UIAlertController(title: nil,
                                                 message: nil,
@@ -86,6 +91,7 @@ class NewPlaceViewController: UITableViewController {
         let newPlace = Place(name: placeName.text!,
                          location: placeLocation.text,
                          type: placeType.text,
+                         rating: currentRating,
                          imageData: imageData)
         if currentPlace != nil {
             try! realm.write {
@@ -108,6 +114,8 @@ class NewPlaceViewController: UITableViewController {
             placeName.text = currentPlace?.name
             placeLocation.text = currentPlace?.location
             placeType.text = currentPlace?.type
+            cosmosView.rating = currentPlace?.rating ?? 0.0
+            
         }
     }
     private func setupNavigationBar() {

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -206,7 +206,6 @@
 		F34A63C976958F6FE89EA785D5D906BC /* RLMObjectBase.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6274D2F5DBF3332A3169622B0A222E23 /* RLMObjectBase.mm */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"5.3.0\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
 		F489AF2C3A4BAA41260095DAB13D5C17 /* RLMObject.h in Headers */ = {isa = PBXBuildFile; fileRef = D286C93CDD812853CE3B812118393BE3 /* RLMObject.h */; };
 		F8116420B37CA79D3BFACFFA8B4E4A15 /* RLMSyncConfiguration.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 856DC26A6AAB492E39C9DF937480E48D /* RLMSyncConfiguration.h */; };
-		F9046504EA3E111BBB818F466AA52090 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A3CF316AC981A167EC23CD2AAA4574 /* Realm.framework */; };
 		F92BD30DFB4218BCD136C73A3EE04927 /* RLMRealm_Dynamic.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = AD12C3BA5D71A1DC3DD2B503275C83CC /* RLMRealm_Dynamic.h */; };
 		F9CEDE306E79AB2DFD9744ECD1DAE87A /* RLMSyncConfiguration_Private.h in Copy . Private Headers */ = {isa = PBXBuildFile; fileRef = 5229B6905C1B6E2C678A8D29F7D42ED7 /* RLMSyncConfiguration_Private.h */; };
 		FEC148147D381D36ABDEAB648CFDB90A /* RLMSchema_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CFD44AEF0980144BC60F7442D8E69BA /* RLMSchema_Private.h */; };
@@ -552,7 +551,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				37293EF9EF01BF880C887851A77E92A6 /* Foundation.framework in Frameworks */,
-				F9046504EA3E111BBB818F466AA52090 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1005,6 +1003,8 @@
 				850EA351F66E433474F35B92DC3E57B5 /* PBXTargetDependency */,
 			);
 			name = "Pods-PlaceNotes";
+			packageProductDependencies = (
+			);
 			productName = "Pods-PlaceNotes";
 			productReference = EC3BA365946C93543EF19D3D807780EB /* Pods_PlaceNotes.framework */;
 			productType = "com.apple.product-type.framework";
@@ -1085,6 +1085,9 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			packageReferences = (
+				886BB04F24E3E5160073FCB6 /* XCRemoteSwiftPackageReference "Cosmos" */,
+			);
 			productRefGroup = 0F7DB9AFD5C2C6756458FC80202E5630 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1875,6 +1878,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		886BB04F24E3E5160073FCB6 /* XCRemoteSwiftPackageReference "Cosmos" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/Cosmos.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 22.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }
