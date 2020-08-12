@@ -48,7 +48,7 @@ import UIKit
     
     @objc func ratingButtonTapped(button: UIButton) {
         guard let index = ratingButtons.firstIndex(of: button) else { return }
-        
+        //Calculate the rating of the selected button
         let selectedRating = index + 1
         
         if selectedRating == rating {
